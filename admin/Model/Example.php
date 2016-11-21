@@ -13,9 +13,6 @@ defined('_JEXEC') or die;
 
 class Example extends Model
 {
-	/** @var string $_table */
-	protected $_table = '#__simple_data';
-
 	protected $_fields = array(
 		'title' => array(
 			'mysql_type' => 'varchar(128)',
@@ -48,4 +45,8 @@ class Example extends Model
 		),
 	);
 
+	protected function determine()
+	{
+		$this->_table = '#__simple_data';
+	}
 }
